@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PHSensor</string>
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="bluetooth_not_supported">Bluetooth is not supported.</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="disconnected">disconnected</string>
+    <string name="connected">connected</string>
+    <string name="connection_state">connection state</string>
+    <string name="data">Data</string>
+    <string name="unknown_device" />
+    <string name="unknown_service">unknown_service</string>
+    <string name="unknown_characteristic">unknown_characteristic</string>
+
+</resources>

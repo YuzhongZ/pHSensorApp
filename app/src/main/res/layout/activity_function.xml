@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FunctionActivity">
+
+    <TextView
+        android:id="@+id/tv_func_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Main"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+    <!--<TextView
+        android:id="@+id/tv_func_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        />
+    <TextView
+        android:id="@+id/tv_func_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPS"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        />-->
+
+    <Button
+        android:id="@+id/btn_func_ble"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:text="BLE" />
+
+</LinearLayout>
