@@ -195,7 +195,15 @@ public class BluetoothLEService extends Service {
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
-                Log.w(TAG, "!!!!read Characteristic ");
+                Log.w(TAG, "!!!!Successful read");
+            }
+        }
+
+        @Override
+        public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+                //broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+                Log.w(TAG, "!!!!Successful write");
             }
         }
 
@@ -216,6 +224,7 @@ public class BluetoothLEService extends Service {
     private void broadcastUpdate(final String action, final BluetoothGattCharacteristic characteristic) {
         final Intent intent = new Intent(action);
         byte[] data = characteristic.getValue();
+
         Log.w(TAG, "!!!!broadcast Update characteristic");
         if (data != null && data.length > 0) {
             final StringBuilder stringBuilder = new StringBuilder(data.length);
@@ -227,6 +236,7 @@ public class BluetoothLEService extends Service {
             Log.i(TAG, "!!!!broadcastUpdate: string is:" + stringBuilder);
             intent.putExtra("BLE_BYTE_DATA", data);
             intent.putExtra("BLE_BYTE_String", new String(data));
+            writeCharacteristic(characteristic);
         }
         // This is special handling for the Heart Rate Measurement profile. Data
         // parsing is carried out as per profile specifications.
@@ -318,6 +328,10 @@ public class BluetoothLEService extends Service {
             Log.w(TAG, "BluetoothAdapter not initialized");
             return;
         }
+
+        byte[] value = new byte[] {0x01, 0x02};
+        characteristic.setValue(value);
         mBluetoothGatt.writeCharacteristic(characteristic);
+        Log.w(TAG, "!!!!write Characteristic");
     }
 }

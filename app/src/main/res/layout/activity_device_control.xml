@@ -12,7 +12,7 @@
         android:id="@+id/button_connect"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="260dp"
+        android:layout_marginLeft="230dp"
         android:layout_marginTop="30dp"
         android:onClick="onButtonClick"
         android:text="connect" />
@@ -21,12 +21,12 @@
         android:id="@+id/device_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="N/A"
+        android:text="Device"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:gravity="center"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         />
 
     <TextView
@@ -37,8 +37,21 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:gravity="center"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="20dp"
         />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="location"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        />
+
+
 
     <!--<LinearLayout android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -63,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
@@ -72,7 +85,6 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="pH:"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="120dp"
             />
 
@@ -81,7 +93,6 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
 
             />
@@ -92,7 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
@@ -101,7 +112,6 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="Temp:"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="95dp"
             />
 
@@ -110,17 +120,17 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
 
             />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         >
 
         <TextView
@@ -129,7 +139,6 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="Salinity:"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="83dp"
             />
 
@@ -138,11 +147,61 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
 
             />
+
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/Information"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:textSize="16sp"
+        android:hint="Additional Information"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textedge"
+
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:textSize="20sp"
+            android:text="Share" />
+
+        <CheckBox
+            android:id="@+id/checkbox_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:text="Private"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onButtonClick"
+        android:text="Send to Database" />
+
 
 
 
